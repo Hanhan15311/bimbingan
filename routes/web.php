@@ -29,7 +29,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/mahasiswa/dokumen', [DashboardMahasiswaController::class, 'dokumen'])
         ->name('mahasiswa.dokumen');
     Route::get('/mahasiswa/laporan', [DashboardMahasiswaController::class, 'laporan'])
-        ->name('mahasiswa.dokumen');
+        ->name('mahasiswa.laporan');
         
 });
 
@@ -47,4 +47,3 @@ Route::middleware(['auth', 'role:kaprodi'])->group(function () {
     Route::get('/kaprodi/dashboard', [DashboardKaprodiController::class, 'index'])
         ->name('kaprodi.dashboard');
 });
-Route::get('/laporan/download/{format}', [LaporanController::class, 'download'])->name('laporan.download');
